@@ -9,7 +9,8 @@
      $fileName = "target.txt";
 $file = fopen($fileName, "r");
 print("hoge");
-print("query is " + $_GET['query']);
+print("query is ");
+print($_GET['query']);
 print("<table>");
 while ($line = fgetcsv($file)) {
     print("<tr>");
