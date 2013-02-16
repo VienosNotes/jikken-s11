@@ -21,7 +21,7 @@
  }
 </script>
 
-<form method="post" action="./sample.php">
+<form method="post" action="./search.php">
 <input type="text" name="KEYWORD" size="15" id="form" />
 <input type="submit" value="submit"/>
 </form>
