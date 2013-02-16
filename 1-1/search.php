@@ -9,11 +9,10 @@
      $fileName = "target.txt";
 $file = fopen($fileName, "r");
 print("hoge");
-$count = 0;
+
 print("<table>");
 while ($line = fgetcsv($file)) {
     print("<tr>");
-    print($count++);
     foreach($line as $data) {
         print("<td>");
         if (preg_match($_GET['query'], $data) == 1) {
@@ -25,11 +24,11 @@ while ($line = fgetcsv($file)) {
         }
         print("</td>");
     }
-    print("</tr>")
+    print("</tr>");
     
 }
 print("</table>");
-    fclose($file);
-    ?>
-  </body>
+fclose($file);
+?>
+</body>
 </html>
