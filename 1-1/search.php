@@ -15,12 +15,14 @@ print("<table>");
 while ($line = fgetcsv($file)) {
     print("<tr>");
     foreach($line as $data) {
-        print("<td>");
+
         if (preg_match("/"+ $_GET['query']+ "/", $data) == 1) {
+            print("<td bgcolor=\"#FF0000\">");
             print("<b><i>");
             print($data);
             print("</i></b>");
         } else {
+            print("<td>");
             print($data);
         }
         print("</td>");
