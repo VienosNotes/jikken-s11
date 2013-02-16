@@ -7,17 +7,16 @@
      </head><body>
 <style type="text/css">
 
-table, td, th { border: 2px #2b2b2b solid; }
+table, td, th { border: 2px #1b1b1b solid; }
 
 </style>
 
      <?php
      $fileName = "target.txt";
 $file = fopen($fileName, "r");
-print("hoge");
 print("query is ");
 print($_GET['query']);
-print("<table>");
+print("<table cellPadding=\"5\">");
 while ($line = fgetcsv($file)) {
     print("<tr>");
     foreach($line as $data) {
