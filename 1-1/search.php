@@ -10,9 +10,12 @@
 $file = fopen($fileName, "r");
 print("hoge");
 $count = 0;
+print("<table>");
 while ($line = fgetcsv($file)) {
+    print("<tr>");
     print($count++);
     foreach($line as $data) {
+        print("<td>");
         if (preg_match($_GET['query'], $data) == 1) {
             print("<b><i>");
             print($data);
@@ -20,8 +23,12 @@ while ($line = fgetcsv($file)) {
         } else {
             print($data);
         }
+        print("</td>");
     }
+    print("</tr>")
+    
 }
+print("</table>");
     fclose($file);
     ?>
   </body>
