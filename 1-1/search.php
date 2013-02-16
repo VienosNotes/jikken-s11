@@ -11,7 +11,9 @@
  
     while (!feof($file)) {
       $str = fgets($file);
-      print "$str<BR>";
+      if (preg_match($_GET["query"], $str) == 1) {
+          print($str);
+      }
     }
  
     fclose($file);
