@@ -5,10 +5,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
      <title></title>
      </head><body>
-     <?php $fileName = "target.txt";
-     $file = fopen($fileName, "r");
+     <?php
+     $fileName = "target.txt";
+$file = fopen($fileName, "r");
 print("hoge");
+$count = 0;
 while (!feof($file)) {
+    print($count++);
     $str = fgets($file);
     if (preg_match($_GET['query'], $str) == 1) {
         print("<b><i>");
