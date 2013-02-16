@@ -11,7 +11,7 @@ $file = fopen($fileName, "r");
 print("hoge");
 print("query is ");
 print($_GET['query']);
-print("<table>");
+print("<table style=\"border: 2px #ff0000 solid;\">");
 while ($line = fgetcsv($file)) {
     print("<tr>");
     foreach($line as $data) {
