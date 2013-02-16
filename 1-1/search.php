@@ -10,15 +10,16 @@
 $file = fopen($fileName, "r");
 print("hoge");
 $count = 0;
-while (!feof($file)) {
+while ($line = fgetcsv($file)) {
     print($count++);
-    $str = fgets($file);
-    if (preg_match($_GET['query'], $str) == 1) {
-        print("<b><i>");
-        print($str);
-        print("</i></b>");
-    } else {
-        print($str);
+    foreach($line as $data) {
+        if (preg_match($_GET['query'], $data) == 1) {
+            print("<b><i>");
+            print($str);
+            print("</i></b>");
+        } else {
+            print($str);
+        }
     }
 }
     fclose($file);
