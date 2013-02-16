@@ -16,7 +16,7 @@ while ($line = fgetcsv($file)) {
     print("<tr>");
     foreach($line as $data) {
 
-        if (preg_match("/"+ $_GET['query']+ "/", $data) == 1) {
+        if (preg_match("/^"+ $_GET['query'] + "/", $data) == 1) {
             print("<td bgcolor=\"#FF0000\">");
             print("<b><i>");
             print($data);
