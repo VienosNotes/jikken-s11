@@ -5,13 +5,19 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
      <title></title>
      </head><body>
+<style type="text/css">
+
+table, td, th { border: 2px #2b2b2b solid; }
+
+</style>
+
      <?php
      $fileName = "target.txt";
 $file = fopen($fileName, "r");
 print("hoge");
 print("query is ");
 print($_GET['query']);
-print("<table style=\"border: 2px #ff0000 solid;\">");
+print("<table>");
 while ($line = fgetcsv($file)) {
     print("<tr>");
     foreach($line as $data) {
