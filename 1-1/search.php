@@ -15,10 +15,10 @@ while ($line = fgetcsv($file)) {
     foreach($line as $data) {
         if (preg_match($_GET['query'], $data) == 1) {
             print("<b><i>");
-            print($str);
+            print($data);
             print("</i></b>");
         } else {
-            print($str);
+            print($data);
         }
     }
 }
