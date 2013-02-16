@@ -11,7 +11,7 @@
  
     while (!feof($file)) {
       $str = fgets($file);
-      if (preg_match($_GET["query"], $str) == 1) {
+      if (preg_match($_GET['query'], $str) == 1) {
           print($str);
       }
     }
