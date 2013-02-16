@@ -9,13 +9,20 @@
 
 <body bgcolor="white" text="black">
 
-<?php phpinfo(); ?>
+
 <h1 align="center">メディア情報検索の基礎　課題1-1</h1>
 <hr align="center" noshade width="80%"/>
 <div align="center">
 
-<form method="post" action="./sample.cgi">
-<input type="text" name="KEYWORD" size="15"/>
+<script type="text/javascript">
+     function search() {
+     var query = window.document.getElementById("form").value;
+     window.open("./search.php?query=" + query);
+ }
+</script>
+
+<form method="post" action="./sample.php">
+<input type="text" name="KEYWORD" size="15" id="form" />
 <input type="submit" value="submit"/>
 </form>
 
