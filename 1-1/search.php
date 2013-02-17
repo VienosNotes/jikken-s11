@@ -17,25 +17,24 @@ print($_GET['query']);
 print("<table cellPadding=\"5\">");
 while ($line = fgetcsv($file)) {
     $output = "";
-    $flag = true;
+    $flag = false;
     $output .= "<tr>";
 
-foreach($line as $data) {
-    
-    if (preg_match("/". $_GET['query'] . "/i", $data) == 1) {
-        $output .= "<td bgcolor=\"#FF0000\">";
-        $output .= "<b><i>";
-        $output .= $data;
-        $output .= "</i></b>";
-    } else {
-        $flag = false;
+    foreach($line as $data) {
+        
+        if (preg_match("/". $_GET['query'] . "/i", $data) == 1) {
+            $flag = true;
+            $output .= "<td bgcolor=\"#FF0000\">";
+            $output .= "<b><i>";
+            $output .= $data;
+            $output .= "</i></b>";
+        } 
+        $output .= "</td>";
     }
-    $output .= "</td>";
-}
-$output .= "</tr>";
-if ($flag) {
-    print($output);
-}
+    $output .= "</tr>";
+    if ($flag) {
+        print($output);
+    }
 
     
 }
