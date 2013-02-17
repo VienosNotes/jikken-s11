@@ -36,6 +36,9 @@
 
 <?php
 print("<table border=\"1\" cellPadding=\"5\" align=\"center\">");
+$fileName = "target.txt";
+$file = fopen($fileName, "r");
+
 while ($line = fgetcsv($file)) {
     $output = "";
     $flag = false;
@@ -50,6 +53,8 @@ while ($line = fgetcsv($file)) {
     $output .= "</tr>";
     print($output);
 }
+
+fclose($file);
 ?>
 
 </table>
