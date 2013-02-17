@@ -10,7 +10,7 @@ table, td, th { border: 2px #1b1b1b solid; }
      </style>
      <?php
 ini_set( "log_errors", "On" );
-ini_set( "error_log", "./error.log" );
+ini_set( "error_log", "/home/ugrad/09/s0911434/public_html/jikken-s11/1-1/error.log" );
 ?>
 
  <?php
