@@ -30,33 +30,27 @@
 
 <hr align="center" noshade width="80%"/>
 
-<table border="1" align="center">
+
 
 <caption>検索対象データ</caption>
 
-<tr>
- <th>ID</th><th>title</th><th>author</th>
-</tr>
-<tr>
- <td><a href="http://www.louvre.fr/francais/magazine/peint/joconde/jocon_f.htm">Image1</a></td>
- <td>Les visages de la Joconde</td><td>Leonardo di ser Piero da Vinci</td>
-</tr>
-<tr>
- <td><a href="http://www.moma.org/docs/collection/paintsculpt/c58.htm">Image2</a></td>
- <td>The Starry Night</td><td>Vincent van Gogh</td>
-</tr>
-<tr>
- <td><a href="http://www.slam.org/am1.html">Image3</a></td>
- <td>The Jolly Flatboatmen in Port</td><td>George Caleb Bingham</td>
-</tr>
-<tr>
- <td><a href="http://national.gallery.ca/slidekits/slidekit_escher/sk_escher10.html">Image4</a></td>
- <td>Waterfall 1961</td><td>M.C. Escher</td>
-</tr>
-<tr>
- <td><a href="http://www.monetalia.com/paintings/monet-garden-of-the-princess-louvre.aspx">Image5</a></td>
- <td>Garden of the Princess, Louvre</td><td>Claude Monet</td>
-</tr>
+<?php
+print("<table border=\"1\" cellPadding=\"5\" align=\"center\">");
+while ($line = fgetcsv($file)) {
+    $output = "";
+    $flag = false;
+    $output .= "<tr>";
+
+    foreach($line as $data) {        
+            $output .= "<td>";
+            $output .= $data;            
+            $output .= "</td>";
+    }
+
+    $output .= "</tr>";
+    print($output);
+}
+?>
 
 </table>
 <form action="add.php" method="post">
