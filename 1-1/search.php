@@ -14,7 +14,7 @@ table, td, th { border: 2px #1b1b1b solid; }
 $file = fopen($fileName, "r");
 print("query is ");
 print($_GET['query']);
-print("<table cellPadding=\"5\">");
+print("<table border=\"1\" cellPadding=\"5\">");
 while ($line = fgetcsv($file)) {
     $output = "";
     $flag = false;
