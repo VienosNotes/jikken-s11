@@ -6,33 +6,37 @@
      <title></title>
      </head><body>
 <style type="text/css">
-
 table, td, th { border: 2px #1b1b1b solid; }
-
-</style>
-
-     <?php
+     </style>
+     
+ <?php
      $fileName = "target.txt";
 $file = fopen($fileName, "r");
 print("query is ");
 print($_GET['query']);
 print("<table cellPadding=\"5\">");
 while ($line = fgetcsv($file)) {
-    print("<tr>");
-    foreach($line as $data) {
+    $output = "";
+    $flag = true;
+    $output .= "<tr>");
 
-        if (preg_match("/". $_GET['query'] . "/i", $data) == 1) {
-            print("<td bgcolor=\"#FF0000\">");
-            print("<b><i>");
-            print($data);
-            print("</i></b>");
-        } else {
-            print("<td>");
-            print($data);
-        }
-        print("</td>");
+foreach($line as $data) {
+    
+    if (preg_match("/". $_GET['query'] . "/i", $data) == 1) {
+        $output .= ("<td bgcolor=\"#FF0000\">");
+        $output .= ("<b><i>");
+        $output .= ($data);
+        $output .= ("</i></b>");
+    } else {
+        $flag = false;
     }
-    print("</tr>");
+    $output .= ("</td>");
+}
+$output .= ("</tr>");
+if ($flag) {
+    print($output);
+}
+
     
 }
 print("</table>");
