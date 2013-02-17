@@ -6,7 +6,7 @@
      <title></title>
      </head><body>
 <style type="text/css">
-table, td, th { border: 1px #1b1b1b; }
+table, td, th { border: 1px #1b1b1b solid; }
      </style>
 
  <?php
