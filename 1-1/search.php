@@ -28,7 +28,10 @@ while ($line = fgetcsv($file)) {
             $output .= "<b><i>";
             $output .= $data;
             $output .= "</i></b>";
-        } 
+        } else {
+            $output .= "<td>";
+            $output .= $data;
+        }
         $output .= "</td>";
     }
     $output .= "</tr>";
