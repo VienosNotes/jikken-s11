@@ -23,16 +23,16 @@ while ($line = fgetcsv($file)) {
 foreach($line as $data) {
     
     if (preg_match("/". $_GET['query'] . "/i", $data) == 1) {
-        $output .= ("<td bgcolor=\"#FF0000\">");
-        $output .= ("<b><i>");
-        $output .= ($data);
-        $output .= ("</i></b>");
+        $output .= "<td bgcolor=\"#FF0000\">";
+        $output .= "<b><i>";
+        $output .= $data;
+        $output .= "</i></b>";
     } else {
         $flag = false;
     }
-    $output .= ("</td>");
+    $output .= "</td>";
 }
-$output .= ("</tr>");
+$output .= "</tr>";
 if ($flag) {
     print($output);
 }
