@@ -8,7 +8,11 @@
 <style type="text/css">
 table, td, th { border: 2px #1b1b1b solid; }
      </style>
-     
+     <?php
+ini_set( "log_errors", "On" );
+ini_set( "error_log", "/home/user1/public_html/php.log" );
+?>
+
  <?php
      $fileName = "target.txt";
 $file = fopen($fileName, "r");
