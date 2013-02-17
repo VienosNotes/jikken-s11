@@ -3,14 +3,14 @@
 <html lang="JA">
 
 <head>
- <meta http-equiv="Content-Type" content="text/html;charset=ISO-2022-JP"/>
- <title>$B%a%G%#%">pJs8!:w$N4pAC(B $B2]Bj(B1-1 sample</title>
+ <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+ <title>メディア情報検索の基礎 課題1-1 sample</title>
 </head>
 
 <body bgcolor="white" text="black">
 
 
-<h1 align="center">$B%a%G%#%">pJs8!:w$N4pAC!!2]Bj(B1-1</h1>
+<h1 align="center">メディア情報検索の基礎　課題1-1</h1>
 <hr align="center" noshade width="80%"/>
 <div align="center">
 
@@ -32,7 +32,7 @@
 
 
 
-<caption>$B8!:wBP>]%G!<%?(B</caption>
+<caption>検索対象データ</caption>
 
 <?php
 print("<table border=\"1\" cellPadding=\"5\" align=\"center\">");
@@ -59,13 +59,13 @@ fclose($file);
 
 </table>
 <form action="add.php" method="post">
- $BDI2C(B: <input type="text" name="content" />
+ 追加: <input type="text" name="content" />
  <input type="submit" />
 </form>
 <hr align="center" noshade width="80%"/>
 
 <div align="center">
-<a href="../text.html">$BLa$k(B</a>
+<a href="../text.html">戻る</a>
 </div>
 
 </body>
