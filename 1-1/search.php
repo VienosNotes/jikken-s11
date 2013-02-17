@@ -18,7 +18,7 @@ print("<table cellPadding=\"5\">");
 while ($line = fgetcsv($file)) {
     $output = "";
     $flag = true;
-    $output .= "<tr>");
+    $output .= "<tr>";
 
 foreach($line as $data) {
     
